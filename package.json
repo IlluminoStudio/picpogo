@@ -6,22 +6,37 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "cypress": "cypress open",
+    "cypress:headless": "cypress run",
+    "kill-port": "npx kill-port 3000",
+    "pretest": "npm run kill-port",
+    "e2e": "npm run pretest && start-server-and-test 'npm run dev' http://localhost:3000 'cypress open --e2e'",
+    "e2e:headless": "npm run pretest && start-server-and-test 'npm run dev' http://localhost:3000 'cypress run --e2e'"
   },
   "dependencies": {
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "next": "15.1.2"
+    "@apollo/client": "^3.12.4",
+    "@chakra-ui/icons": "^2.1.1",
+    "@chakra-ui/next-js": "^2.2.0",
+    "@chakra-ui/react": "^2.8.2",
+    "@emotion/react": "^11.11.3",
+    "@emotion/styled": "^11.11.0",
+    "apollo-link-rest": "^0.9.0",
+    "framer-motion": "^10.18.0",
+    "next": "14.0.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@testing-library/cypress": "^10.0.2",
     "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "postcss": "^8",
-    "tailwindcss": "^3.4.1",
-    "eslint": "^9",
-    "eslint-config-next": "15.1.2",
-    "@eslint/eslintrc": "^3"
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "cypress": "^13.17.0",
+    "eslint": "^8",
+    "eslint-config-next": "14.0.4",
+    "kill-port": "^2.0.1",
+    "start-server-and-test": "^2.0.9",
+    "typescript": "^5"
   }
 }

@@ -1,0 +1,38 @@
+[
+  {
+    "id": "1",
+    "imageUrl": "/img1.jpeg",
+    "userName": "Sarah Johnson",
+    "jobTitle": "CEO"
+  },
+  {
+    "id": "2",
+    "imageUrl": "/img2.jpeg",
+    "userName": "Michael Chen",
+    "jobTitle": "CTO"
+  },
+  {
+    "id": "3",
+    "imageUrl": "/img3.jpeg",
+    "userName": "Emily Rodriguez",
+    "jobTitle": "Head of Design"
+  },
+  {
+    "id": "4",
+    "imageUrl": "/img4.jpeg",
+    "userName": "David Kim",
+    "jobTitle": "Lead Developer"
+  },
+  {
+    "id": "5",
+    "imageUrl": "/img5.jpeg",
+    "userName": "Rachel Thompson",
+    "jobTitle": "Product Manager"
+  },
+  {
+    "id": "6",
+    "imageUrl": "/img6.jpeg",
+    "userName": "James Wilson",
+    "jobTitle": "Marketing Director"
+  }
+] 
