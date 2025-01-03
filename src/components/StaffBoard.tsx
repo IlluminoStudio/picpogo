@@ -12,6 +12,7 @@ import {
   useToast,
   useDisclosure,
   Tooltip,
+  Spinner,
 } from "@chakra-ui/react";
 import { DeleteIcon, AddIcon, EditIcon, LinkIcon } from "@chakra-ui/icons";
 import { useState, useEffect } from "react";
@@ -523,13 +524,14 @@ export default function StaffBoard() {
             color="white"
           >
             <Button
-              leftIcon={<AddIcon />}
+              leftIcon={imageLoading ? <Spinner size="sm" /> : <AddIcon />}
               colorScheme="primary"
               onClick={onAddOpen}
               data-testid="add-staff-button"
               w={{ base: "full", md: "auto" }}
+              isDisabled={imageLoading}
             >
-              Snap & Shine! ✨
+              {imageLoading ? "Loading..." : "Snap & Shine! ✨"}
             </Button>
           </Tooltip>
 
